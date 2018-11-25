@@ -11,7 +11,8 @@ echo "output: build-deps.log"
 exec &> $LOGFILE
 
 for org_package in */ ; do
-  if [ -d "${org_package}" ] ; then
+  # do not process symlinks
+  if ! [ -L ${org_package} ]; then
     cd $org_package
     echo "-- processing dependency: $org_package --"
     yarn && yarn $SCRIPT
