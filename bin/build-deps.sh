@@ -11,11 +11,13 @@ echo "output: build-deps.log"
 exec &> $LOGFILE
 
 for org_package in */ ; do
-  cd $org_package
-  echo "-- processing dependency: $org_package --"
-  yarn && yarn $SCRIPT
-  # clear internal node_modules after build
-  rm -rf node_modules
-  cd ..
-  echo "-- complete --"
+  if [ -d "${org_package}" ] ; then
+    cd $org_package
+    echo "-- processing dependency: $org_package --"
+    yarn && yarn $SCRIPT
+    # clear internal node_modules after build
+    rm -rf node_modules
+    cd ..
+    echo "-- complete --"
+  fi
 done
