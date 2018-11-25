@@ -1,11 +1,12 @@
 {
   "name": "multirepo-build-deps",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "repository": "git@github.com:dannywieser/multirepo-build-deps.git",
   "author": "<dannywieser@gmail.com>",
   "license": "MIT",
   "bin": {
-    "build-deps": "./bin/build-deps.sh"
+    "build-deps": "./bin/build-deps.sh",
+    "watch-deps": "./bin/watch-deps.sh"
   }
 }

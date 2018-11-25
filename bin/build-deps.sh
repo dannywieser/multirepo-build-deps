@@ -16,5 +16,6 @@ for org_package in */ ; do
   yarn && yarn $SCRIPT
   # clear internal node_modules after build
   rm -rf node_modules
+  cd ..
   echo "-- complete --"
 done
