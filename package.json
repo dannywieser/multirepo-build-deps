@@ -1,0 +1,11 @@
+{
+  "name": "multirepo-build-deps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dannywieser/multirepo-build-deps.git",
+  "author": "<dannywieser@seequent.com>",
+  "license": "MIT",
+  "bin": {
+    "build-deps": "./bin/bundle-demo"
+  }
+}
