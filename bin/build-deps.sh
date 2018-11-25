@@ -5,6 +5,11 @@ LOGDIR=`pwd`;
 LOGFILE=$LOGDIR/build-deps.log
 SCRIPT=${2:-build}
 
+if [[ -z "$ORG" ]]; then
+  echo "usage: build-deps organization [script]"
+  exit 1
+fi
+
 cd node_modules/$ORG
 echo "builddeps: $ORG"
 echo "output: build-deps.log"

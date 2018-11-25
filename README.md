@@ -44,3 +44,12 @@ Example usage: `yarn watch-deps $myorg`
 
 Note that this will only trigger the watch command if the dependency is found to be a link. This assumes that for a non-linked package that a one-time build on install (`build-deps`) will suffice.
 
+```json
+    "watch-deps": "watch-deps @myorg"
+```
+
+OR 
+
+```json
+    "watch-deps": "watch-deps @myorg my-watch-command"
+```

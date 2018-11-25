@@ -3,6 +3,11 @@
 ORG=$1
 SCRIPT=${2:-watch}
 
+if [[ -z "$ORG" ]]; then
+  echo "usage: watch-deps organization [script]"
+  exit 1
+fi
+
 cd node_modules/$ORG
 echo "watch-deps: $ORG"
 
